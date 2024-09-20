@@ -20,7 +20,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    docker build -t varthdochub/cicd-e2e:${BUILD_NUMBER} .
+                    docker build -t varthinidochub/cicd-e2e:${BUILD_NUMBER} .
                     '''
                 }
             }
@@ -31,11 +31,13 @@ pipeline {
                 script{
                     sh '''
                     echo 'Push to Repo'
-                    docker push varthdochub/cicd-e2e:${BUILD_NUMBER}
+                    docker push varthinidochub/cicd-e2e:${BUILD_NUMBER}
                     '''
                 }
             }
         }
+        
+        
         
       }
 }
